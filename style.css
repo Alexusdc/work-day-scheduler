@@ -69,16 +69,3 @@ textarea{
   font-size: 20px;
   transition: all .3s ease-in-out;
 }
-
-.form-group {
-  border: #a0a0ab solid;
-}
-
-h2 {
-  border-bottom: #a0a0ab dotted;
-  border-top: #a0a0ab dotted;
-}
-
-.btn {
-  border: #06AED5 solid;
-}

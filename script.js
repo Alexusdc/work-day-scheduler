@@ -22,11 +22,24 @@ var eventFormHandler = function (event) {
   document.querySelector("select[name='event-type']").selectedIndex = 0;
 };
 
+setInterval (function() {
+    const oElem = document.getElementsByClassName("event-form");
+    for (i = 0; i < oElem.length; i++) {
+        if (moment().format("H") == oElem[i].id) {
+            oElem[i].classList.add ("present");
+
+        }
+        else if (moment().format("H") > oElem[i].id) {
+            oElem[i].classList.add ("past")
+        }
+        else {
+            oElem[i].classList.add ("future")
+        }
+    }
+},1000);
+
+console.log(moment().format("H"))
 
 var saveEvent = function() {
     localStorage.setItem("events", JSON.stringify(events));
 };
-
-// Create a new event 
-formEl.addEventListener("submit", eventFormHandler)
-
