@@ -70,6 +70,15 @@ textarea{
   transition: all .3s ease-in-out;
 }
 
-#timeblocks {
-  border: #000000 solid;
+.form-group {
+  border: #a0a0ab solid;
+}
+
+h2 {
+  border-bottom: #a0a0ab dotted;
+  border-top: #a0a0ab dotted;
+}
+
+.btn {
+  border: #06AED5 solid;
 }
