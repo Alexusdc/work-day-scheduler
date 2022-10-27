@@ -15,4 +15,19 @@ var eventFormHandler = function (event) {
         alert("You need to enter in the event!");
         return false;
     }
-}
+
+      // reset form fields for next event to be entered
+  document.querySelector("input[name='event-name']").value = "";
+  document.querySelector("select[name='event-type']").selectedIndex = 0;
+};
+
+
+
+var saveEvent = function() {
+    localStorage.setItem("events", JSON.stringify(events));
+};
+
+// Create a new event 
+formEl.addEventListener("submit", eventFormHandler)
+
+loadEvents();
